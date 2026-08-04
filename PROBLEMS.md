@@ -300,3 +300,15 @@ verification) that cascades through downstream decisions.** Reliability in agent
 AI is a *systems-engineering* problem, not a prompting problem [2]. The highest-value
 new projects attack the cascade at its source: visibility, eval, and runtime control
 that intervene *before* bad output reaches the world.
+
+---
+
+## Related: the money axis
+
+Several problems above are **prerequisites for paid agent work** — no business will
+pay for an agent that deletes a production folder (P4), loops forever (P1), or can't
+prove it completed a task (P2, P10). For the full analysis of whether agents earn
+real money and the problems blocking reliable agentic income, see
+[MONEY-EARNING.md](MONEY-EARNING.md): problems P-M1 (distribution bottleneck),
+P-M2 (cost vs. revenue), P-M3 (outcome verification), P-M4 (agent-to-agent payment
+rails), P-M5 (autonomous market-fit loop), P-M6 (reliability blocks paid SLAs).

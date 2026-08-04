@@ -34,6 +34,8 @@ behind that sentence, each grounded in real incident reports and primary sources
    a real incident, why current solutions fall short, and what a good solution needs.
 3. Use [REFERENCES.md](REFERENCES.md) to read the original sources.
 4. See **Where to build** for the least-saturated, highest-leverage gaps.
+5. For the **money** axis — can agents earn real income, and the problems
+   blocking reliable agentic income — read [MONEY-EARNING.md](MONEY-EARNING.md).
 
 ---
 
