@@ -58,7 +58,7 @@ agent loop ──▶ ┌──────────────────�
 
 | Milestone | Deliverable | Acceptance criteria (must run, not describe) |
 |-----------|-------------|----------------------------------------------|
-| **M0** | Scaffold | `guardrail --version`, `--help`, `--json` work; `npm run build && node --test` green; published as a repo under prem-the-dev |
+| **M0** | Scaffold ✅ | `guardrail --version`, `--help`, `--json` work; `npm run build && node --test` green; published as a repo under prem-the-dev — **done: [prem-the-dev/guardrail](https://github.com/prem-the-dev/guardrail) v0.1.0, 21 tests green, CI passing** |
 | **M1** | Policy engine | JSON/YAML policy file: tool allowlist/denylist, per-tool rate caps, destructive-action patterns (`rm -rf`, `DROP TABLE`, `git push --force`); e2e test: policy blocks a real tool call |
 | **M2** | Budget ledger | Token + $ caps with per-run/per-day scopes; hard stop when exhausted; e2e test: budget-exhausted call returns BLOCK |
 | **M3** | Injection detector | OWASP prompt-injection pattern set + heuristic scoring; e2e test: known injection (dan/directions-switch/jailbreak) flagged; FP rate < 5% on a benign corpus |
@@ -92,4 +92,6 @@ Each milestone is a self-contained PR-sized unit: implement → add real e2e tes
 
 ---
 
-*Status: M0 not started. Last reviewed 2026-08-05.*
+*Status: M0 ✅ done — [guardrail](https://github.com/prem-the-dev/guardrail) v0.1.0
+(scaffold + policy-file contract, 21 tests, CI green). Next: M1 policy engine.
+Last reviewed 2026-08-05.*
