@@ -75,13 +75,14 @@ agent loop ──▶ ┌──────────────────�
 
 ## Success metrics (v1 definition of done)
 
-- p95 decision latency **< 200ms** on the target laptop (measured in M4's e2e test).
-- **0 blocked** legitimate actions in the demo workload (false-positive floor).
-- **100% of test injections** flagged before the tool call executes.
+- p95 decision latency **< 200ms** on the target laptop (measured in M4's e2e test). ✅
+- **0 blocked** legitimate actions in the demo workload (false-positive floor). ✅
+- **100% of test injections** flagged before the tool call executes. ✅
 - Hard budget caps **never exceeded** in the e2e suite (property tested with
-  randomized loop counts).
+  randomized loop counts). ✅
 - Every verdict logged as JSON → a 10-line `guardrail report` command shows the
-  full decision trace (bridging into gap #2 later).
+  full decision trace (bridging into gap #2 later). ✅ — **`--trace` on
+  `decide`/`serve` writes JSONL; `guardrail report --trace <file>` summarizes**
 
 ## How to run this roadmap
 
@@ -92,8 +93,9 @@ Each milestone is a self-contained PR-sized unit: implement → add real e2e tes
 
 ---
 
-*Status: **ALL MILESTONES COMPLETE** — [guardrail](https://github.com/prem-the-dev/guardrail)
-v1.0.0 shipped: policy engine + budget ledger + injection scanner + guarded
-proxy, 61 tests green, CI passing, all v1 success metrics met and asserted by
-real tests (p95 < 200ms, FP < 5%, hard budget caps never exceeded, 100% of
-test injections flagged). Last reviewed 2026-08-05.*
+*Status: **PROJECT COMPLETE — ALL v1 DEFINITION-OF-DONE MET.** [guardrail](https://github.com/prem-the-dev/guardrail)
+v1.1.0: policy engine + budget ledger + injection scanner + guarded proxy +
+JSONL decision trace + `report` command, 71 tests green, CI passing. Every
+success metric is asserted by real tests (p95 < 200ms, FP < 5%, hard budget
+caps never exceeded, 100% of test injections flagged, every verdict logged as
+JSON). Last reviewed 2026-08-05.*
