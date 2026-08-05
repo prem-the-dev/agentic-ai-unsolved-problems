@@ -112,6 +112,10 @@ forever ([P1](PROBLEMS.md)), no business will pay for it. Paid agent work
 **What to solve:** ship the reliability primitives (halt conditions, sandbox-first
 execution, verification gates) *before* charging for agent output.
 
+For the **existing open-source solutions** to each of these money problems
+(P-M1…P-M9) — every one already has a real OSS project — see
+[OSS-SOLUTIONS.md](OSS-SOLUTIONS.md).
+
 ---
 
 ## Where the real, low-risk money is

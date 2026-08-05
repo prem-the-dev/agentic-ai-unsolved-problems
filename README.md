@@ -36,6 +36,8 @@ behind that sentence, each grounded in real incident reports and primary sources
 4. See **Where to build** for the least-saturated, highest-leverage gaps.
 5. For the **money** axis — can agents earn real income, and the problems
    blocking reliable agentic income — read [MONEY-EARNING.md](MONEY-EARNING.md).
+6. For **existing open-source solutions** to every money-earning problem
+   (P-M1…P-M9) — [OSS-SOLUTIONS.md](OSS-SOLUTIONS.md).
 
 ---
 
