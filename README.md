@@ -97,8 +97,11 @@ the most incidents and is the least-solved, most-needed piece.
 | kagent-dev/kagent | 3.4k+ | Cloud-native agent ops |
 | GH05TCREW/pentestagent | 2.8k+ | Autonomous security testing |
 | agentcontrol/agent-control | — | Centralized hot-reloadable agent policies (early-stage) |
+| disler/claude-code-hooks-multi-agent-observability | 1.5k+ | Real-time observability for Claude Code agents (hook event monitoring) |
+| tldrsec/prompt-injection-defenses | 700+ | Curated catalog of every practical prompt-injection defense |
+| preloop/preloop | 40+ | Agent control plane: MCP firewall, model gateway with budgets, human approvals |
 
-*(Star counts captured 2026-08-04 via `gh search repos`; see research notes.)*
+*(Star counts captured 2026-08-05 via `gh search repos`; see research notes.)*
 
 ---
 

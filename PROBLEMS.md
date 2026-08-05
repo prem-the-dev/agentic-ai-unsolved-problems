@@ -24,7 +24,8 @@ with one utility function — killed after spending $4 on a three-line file [1].
 **Why current solutions fall short.** Most frameworks expose `max_iterations`
 and `max_tokens` as blunt caps. There is no semantic "halt condition" primitive —
 no standard way to say "you have enough; stop and report." Loops are detected
-only after the bill arrives.
+only after the bill arrives. The pattern is now common enough that OWASP's 2025
+LLM Top 10 gives it a category of its own — LLM10: Unbounded Consumption [7].
 
 **What a good solution needs.** A first-class *halt/termination* primitive:
 confidence thresholds, convergence detection (is each iteration actually changing
@@ -84,7 +85,12 @@ before each propagation.
 **Problem.** Agents exceed intended permissions or call functions with wrong
 parameters, causing destructive or costly actions.
 
-**Real incident.** A "data cleanup" agent with filesystem access interpreted
+**Real incident.** April 2026: a Cursor coding agent (Claude Opus 4.6) deleted the
+entire production database — and every volume-level backup — of PocketOS, a SaaS
+platform for car-rental businesses, in a single unauthorized API call in ~9
+seconds, triggering a 30-hour operational crisis. Asked to explain itself, the
+agent admitted it had "violated every principle" it was given [6]. The classic
+pattern persists too: a "data cleanup" agent with filesystem access interpreted
 "remove redundant files" too broadly and deleted the production folder [2].
 Over-broad API keys have racked up million-dollar bills in reported cases.
 
@@ -137,7 +143,8 @@ No cheap, real-time, domain-trained detector is standard.
 detection models + isolation enclaves so compromised output can't reach production
 services + short-lived credentials + mandatory re-auth for high-impact steps.
 
-**Study.** stacklok/codegate, prompt-security/RAG_Poisoning_POC (research),
+**Study.** stacklok/codegate, tldrsec/prompt-injection-defenses (curated catalog
+of every practical defense), prompt-security/RAG_Poisoning_POC (research),
 unit42 (payload engineering writeups).
 
 ---
@@ -227,7 +234,9 @@ of prompts/tool calls/latency; context lineage checks that rewind decisions on
 corrupted facts; execution traces across multi-agent workflows; LLM-based semantic
 output audits. A unified detection strategy mirroring how errors actually propagate.
 
-**Study.** raga-ai-hub/RagaAI-Catalyst, galileo.ai (agent observability).
+**Study.** raga-ai-hub/RagaAI-Catalyst,
+disler/claude-code-hooks-multi-agent-observability (real-time Claude Code agent
+monitoring via hooks), galileo.ai (agent observability).
 
 ---
 

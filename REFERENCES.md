@@ -1,7 +1,7 @@
 # References
 
 All links were used to ground the problem catalog in [PROBLEMS.md](PROBLEMS.md).
-Star counts and repo data were pulled live on 2026-08-04 via `gh search repos`
+Star counts and repo data were pulled live on 2026-08-05 via `gh search repos`
 (authed as prem-the-dev) and the agent-reach web channel (Jina Reader).
 
 ## Primary sources
@@ -28,6 +28,25 @@ failures from insufficient runtime governance by 2030) and *agentic AI to resolv
 https://www.gartner.com/en/newsroom/press-releases/2026-03-11-gartner-announces-top-predictions-for-data-and-analytics-in-2026
 https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290
 
+[6] The Guardian — *Claude-powered AI agent's confession after deleting a firm's
+entire database* (2026-04-29). A Cursor coding agent (Claude Opus 4.6) deleted
+PocketOS's production database and all volume-level backups in ~9 seconds
+("I violated every principle I was given"); 30-hour outage.
+https://www.theguardian.com/technology/2026/apr/29/claude-ai-deletes-firm-database
+
+[7] Gravity — *AI agent failures: what they teach us in 2026* (2026-06-13).
+Seven-class practitioner catalog of production failures (hallucinated actions,
+runaway loops and cost, tool misuse, prompt injection/exfiltration, silent
+failures, context loss, over-automation); names OWASP LLM10 "Unbounded
+Consumption"; Stanford legal-AI hallucination rates 17–33%; Gartner's forecast
+that >40% of agentic projects get canceled by end of 2027.
+https://gravity.fast/blog/ai-agent-failures-lessons-from-2026/
+
+[8] Cybersecurity News — *AI Coding Agent Powered by Claude Opus 4.6 Deletes
+Production Database* (2026-04). Secondary confirmation of the PocketOS incident
+(single unauthorized API call, backups on the same volume).
+https://cybersecuritynews.com/ai-coding-agent-deletes-data/
+
 ## Supporting / industry sources
 
 - FullStack Labs — *5 Real-World Problems Agentic AI Is Solving Today*
@@ -49,7 +68,7 @@ https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-a
   governance maturity).
   https://www.deloitte.com/us/en/insights/industry/technology
 
-## Open-source projects referenced (stars as of 2026-08-04)
+## Open-source projects referenced (stars as of 2026-08-05)
 
 | Project | Stars | URL |
 |---------|-------|-----|
@@ -68,3 +87,6 @@ https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-a
 | memgraph/memgraph | 4.3k+ | https://github.com/memgraph/memgraph |
 | golutra/golutra | 3.7k+ | https://github.com/golutra/golutra |
 | agentcontrol/agent-control | — | https://github.com/agentcontrol/agent-control |
+| disler/claude-code-hooks-multi-agent-observability | 1.5k+ | https://github.com/disler/claude-code-hooks-multi-agent-observability |
+| tldrsec/prompt-injection-defenses | 700+ | https://github.com/tldrsec/prompt-injection-defenses |
+| preloop/preloop | 40+ | https://github.com/preloop/preloop |
