@@ -107,10 +107,10 @@ JSON). Last reviewed 2026-08-05.*
 The other three build gaps from `README.md → Where to build`, plus the money
 integration stack, are now built and tested as separate zero-dependency packages:
 
-- **Gap #2 — Agent observability / evaluation** → [`agenteval`](https://github.com/prem-the-dev/agenteval) (32 tests green). Closes P3, P8, P10.
-- **Gap #3 — Memory poisoning prevention** → [`memvault`](https://github.com/prem-the-dev/memvault) (22 tests green). Closes P7, P12.
-- **Gap #4 — Domain agents with hard verification** → [`veritas`](https://github.com/prem-the-dev/veritas) (18 tests green). Closes P2, P13.
-- **Money axis (P-M1…P-M9)** → [`moneypipe`](https://github.com/prem-the-dev/moneypipe) (12 tests green). Wires the 9 money primitives into one pipeline with hard per-job budget control.
+- **Gap #2 — Agent observability / evaluation** → [`agenteval`](https://github.com/prem-the-dev/agenteval) (34 tests green, verified 2026-08-09). Closes P3, P8, P10.
+- **Gap #3 — Memory poisoning prevention** → [`memvault`](https://github.com/prem-the-dev/memvault) (27 tests green, verified 2026-08-09). Closes P7, P12.
+- **Gap #4 — Domain agents with hard verification** → [`veritas`](https://github.com/prem-the-dev/veritas) (22 tests green, verified 2026-08-09). Closes P2, P13.
+- **Money axis (P-M1…P-M9)** → [`moneypipe`](https://github.com/prem-the-dev/moneypipe) (14 tests green, verified 2026-08-09). Wires the 9 money primitives into one pipeline with hard per-job budget control.
 
 All four follow the same conventions as `guardrail` (Node ≥18 ESM, `npm run
 build && node --test`, `--json`/`-v`/`-h`, zero runtime deps). The catalog's
