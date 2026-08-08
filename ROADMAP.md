@@ -99,3 +99,20 @@ JSONL decision trace + `report` command, 71 tests green, CI passing. Every
 success metric is asserted by real tests (p95 < 200ms, FP < 5%, hard budget
 caps never exceeded, 100% of test injections flagged, every verdict logged as
 JSON). Last reviewed 2026-08-05.*
+
+---
+
+## Subsequent gaps — also shipped
+
+The other three build gaps from `README.md → Where to build`, plus the money
+integration stack, are now built and tested as separate zero-dependency packages:
+
+- **Gap #2 — Agent observability / evaluation** → [`agenteval`](https://github.com/prem-the-dev/agenteval) (32 tests green). Closes P3, P8, P10.
+- **Gap #3 — Memory poisoning prevention** → [`memvault`](https://github.com/prem-the-dev/memvault) (22 tests green). Closes P7, P12.
+- **Gap #4 — Domain agents with hard verification** → [`veritas`](https://github.com/prem-the-dev/veritas) (18 tests green). Closes P2, P13.
+- **Money axis (P-M1…P-M9)** → [`moneypipe`](https://github.com/prem-the-dev/moneypipe) (12 tests green). Wires the 9 money primitives into one pipeline with hard per-job budget control.
+
+All four follow the same conventions as `guardrail` (Node ≥18 ESM, `npm run
+build && node --test`, `--json`/`-v`/`-h`, zero runtime deps). The catalog's
+four highest-leverage build gaps plus the money integration layer now have
+runnable reference code.

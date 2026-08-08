@@ -67,22 +67,47 @@ behind that sentence, each grounded in real incident reports and primary sources
 ## Where to build (least saturated, highest leverage)
 
 The framework space is crowded. The **open gaps with little mature open-source
-competition** are:
+competition** were (each now has a reference implementation — see *Shipped under
+prem-the-dev* above):
 
 1. **Runtime guardrails + cost control** — a self-hosted layer that plugs into
    *any* framework and blocks unsafe/over-budget actions in <200ms.
-   (attacks problems 4, 5, 6, 11)
+   (attacks problems 4, 5, 6, 11) — **shipped: [`guardrail`](https://github.com/prem-the-dev/guardrail)**
 2. **Agent observability / evaluation** — agentic-specific metrics
    (Action Completion, Tool Selection Quality, Reasoning Coherence) with
-   execution traces spanning multi-agent handoffs. (attacks 3, 8, 10)
+   execution traces spanning multi-agent handoffs. (attacks 3, 8, 10) — **shipped: [`agenteval`](https://github.com/prem-the-dev/agenteval)**
 3. **Memory poisoning prevention** — signed, versioned, provenance-tracked
-   memory with rollback. (attacks 7, 12)
+   memory with rollback. (attacks 7, 12) — **shipped: [`memvault`](https://github.com/prem-the-dev/memvault)**
 4. **Domain agents with hard verification** — healthcare / legal / compliance
    where "stopping early" is unacceptable; multi-stage validators as a primitive.
-   (attacks 2, 13)
+   (attacks 2, 13) — **shipped: [`veritas`](https://github.com/prem-the-dev/veritas)**
 
 A self-hosted, framework-agnostic **guardrail + eval** layer (1) directly attacks
 the most incidents and is the least-solved, most-needed piece.
+
+---
+
+## Shipped under prem-the-dev
+
+These four gaps now have **working, tested, zero-dependency reference
+implementations** built from this catalog (each closes the problems listed):
+
+| Gap | Project | Repo | Closes | Stack |
+|-----|---------|------|--------|-------|
+| #1 | Runtime guardrail layer | [`guardrail`](https://github.com/prem-the-dev/guardrail) | P4, P5, P6, P11 | self-hosted action gate, cost/latency budget, injection guard, hot-reload policy |
+| #2 | Agent observability / evaluation | [`agenteval`](https://github.com/prem-the-dev/agenteval) | P3, P8, P10 | Action Completion / Tool Selection Quality / Reasoning Coherence metrics, multi-agent trace stitching, semantic-failure detection |
+| #3 | Memory poisoning prevention | [`memvault`](https://github.com/prem-the-dev/memvault) | P7, P12 | Ed25519-signed versioned memory, provenance, rollback, poisoning validators, drift detection |
+| #4 | Domain agents w/ hard verification | [`veritas`](https://github.com/prem-the-dev/veritas) | P2, P13 | plan/execute/output gates, completion criteria, grounding assertions, mandatory human sign-off |
+
+Plus the **integration** layer for the money axis:
+
+| Money | Project | Repo | Wires |
+|-------|---------|------|-------|
+| P-M1…P-M9 | Money-earning reference stack | [`moneypipe`](https://github.com/prem-the-dev/moneypipe) | find → work-cheaply → prove → pay → sell → identify, with hard per-job budget control |
+
+All five are MIT, Node ≥18 ESM, `npm run build && node --test`, zero runtime
+dependencies. Gaps #1–#4 are **in-progress → shipped**; the catalog now points
+at real, runnable code rather than only describing the gap.
 
 ---
 
